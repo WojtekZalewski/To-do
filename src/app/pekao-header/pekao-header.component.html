@@ -1,0 +1,13 @@
+<header>
+	<h1>TODO list</h1>
+	<div *ngIf='user'>
+		<button (click)="onLogout()">Logout</button>
+	</div>
+	<div *ngIf='!user'>
+		<input [(ngModel)]='login' />
+		<input [(ngModel)]='password' />
+		<button (click)="onLogin()">Login</button>
+	</div>
+</header>
+
+

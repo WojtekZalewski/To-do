@@ -1,0 +1,28 @@
+<section>
+    <div id="tasks_box">
+       <h2>Add task:</h2>
+        <input id="add_task" placeholder="example task ..." [(ngModel)]="newTask">
+        <button class="add_task_btn" (click)="addTask()">add</button>
+    </div>
+     <ng-container *ngIf="taskList.length > 0; else noTask" id="tasks_list_box" class="container">
+        <ol>
+            <li *ngFor="let task of taskList">
+               {{task}}
+                 <button class="remove_task_btn" (click)="removeTask(task)">remove</button>
+                 <button class="done_task_btn" (click)="doneTask(task)">done</button>
+            </li>
+        </ol>
+     </ng-container>
+     <ng-template #noTask>
+         <div class="no_task_box">No task, please add task</div>
+     </ng-template>
+    <div id="taks_done_box" class="container">
+      <h2>Done task:</h2>
+       <ol>
+           <li *ngFor="let task of tasksDone">
+              {{task}}
+           </li>
+           <div id="counter">Counter: {{tasksDone.length}}</div>
+       </ol>
+    </div>
+</section>
