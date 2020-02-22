@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
 			// apiKey: 'AIzaSyBDb4PV8wFKHuzuMXk3Lxv6NtiF86Ya7YI',
 			// databaseURL: 'https://todo-1d6f5.firebaseio.com/',
 
-			apiKey: 'AIzaSyDjYBh7wx0uWn0rTd6BWl_0s2aigNJUSDM',
-			databaseURL: 'https://trzykomponenty.firebaseio.com/',
+			apiKey: 'AIzaSyBkvBYByvInYiNa_r0AXTWX8qI6zFvtVko',
+			databaseURL: 'https://todo-app-trzykomponenty.firebaseio.com/',
 		};
 		firebase.initializeApp(config);
 		firebase.auth().onAuthStateChanged(firebaseUser => {
