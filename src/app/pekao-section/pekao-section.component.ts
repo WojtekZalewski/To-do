@@ -1,12 +1,11 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
 
 @Component({
-  selector: 'pekao-section',
-  templateUrl: './pekao-section.component.html',
-  styleUrls: ['./pekao-section.component.scss']
+  selector: "pekao-section",
+  templateUrl: "./pekao-section.component.html",
+  styleUrls: ["./pekao-section.component.scss"],
 })
 export class PekaoSectionComponent implements OnInit {
-
   newTask;
   @Output() emitTask = new EventEmitter();
   @Input() taskList = [];
@@ -14,21 +13,20 @@ export class PekaoSectionComponent implements OnInit {
   @Output() emitRemove = new EventEmitter();
   @Input() tasksDone = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  addTask() {
+    this.emitTask.emit(this.newTask);
+    this.newTask = " ";
   }
 
-	addTask() {
-        this.emitTask.emit(this.newTask);
-        this.newTask = ' ';
-    }
-
   removeTask(task) {
-        this.emitRemove.emit(task);
-    }
+    this.emitRemove.emit(task);
+  }
 
   doneTask(task) {
-      this.emitDone.emit(task);
+    this.emitDone.emit(task);
   }
 }

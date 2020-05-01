@@ -1,28 +1,28 @@
-import 'firebase/auth';
-import 'firebase/database';
+import "firebase/auth";
+import "firebase/database";
 
-import { Component, Input, OnInit } from '@angular/core';
-import * as firebase from 'firebase/app';
+import { Component, Input, OnInit } from "@angular/core";
+import * as firebase from "firebase/app";
 
 @Component({
-	selector: 'pekao-header',
-	templateUrl: './pekao-header.component.html',
-	styleUrls: ['./pekao-header.component.scss'],
+  selector: "pekao-header",
+  templateUrl: "./pekao-header.component.html",
+  styleUrls: ["./pekao-header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-	@Input() user: firebase.User;
-	login = ''; //TODO
-	password = ''; //TODO
+  @Input() user: firebase.User;
+  login = ""; //TODO
+  password = ""; //TODO
 
-	constructor() {}
+  constructor() {}
 
-	ngOnInit() {}
+  ngOnInit() {}
 
-	onLogin() {
-		firebase.auth().signInWithEmailAndPassword(this.login, this.password);
-	}
+  onLogin() {
+    firebase.auth().signInWithEmailAndPassword(this.login, this.password);
+  }
 
-	onLogout() {
-		firebase.auth().signOut();
-	}
+  onLogout() {
+    firebase.auth().signOut();
+  }
 }
