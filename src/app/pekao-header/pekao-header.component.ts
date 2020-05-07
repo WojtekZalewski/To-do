@@ -1,6 +1,5 @@
 import "firebase/auth";
 import "firebase/database";
-
 import { Component, Input, OnInit } from "@angular/core";
 import * as firebase from "firebase/app";
 

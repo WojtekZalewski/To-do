@@ -1,9 +1,7 @@
 import "firebase/auth";
 import "firebase/database";
-
 import { Component, OnInit } from "@angular/core";
 import * as firebase from "firebase/app";
-
 import { ITask } from "./interfaces/itask";
 
 @Component({
@@ -20,7 +18,6 @@ import { ITask } from "./interfaces/itask";
     ></pekao-section>
     <router-outlet></router-outlet>
   `,
-  // templateUrl: './app.component.html',
   styles: [],
 })
 export class AppComponent implements OnInit {
@@ -34,9 +31,6 @@ export class AppComponent implements OnInit {
 
   firebaseInit() {
     const config = {
-      // apiKey: 'AIzaSyBDb4PV8wFKHuzuMXk3Lxv6NtiF86Ya7YI',
-      // databaseURL: 'https://todo-1d6f5.firebaseio.com/',
-
       apiKey: "AIzaSyBkvBYByvInYiNa_r0AXTWX8qI6zFvtVko",
       databaseURL: "https://todo-app-trzykomponenty.firebaseio.com/",
     };
