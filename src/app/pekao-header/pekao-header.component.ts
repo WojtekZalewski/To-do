@@ -10,8 +10,8 @@ import * as firebase from "firebase/app";
 })
 export class HeaderComponent implements OnInit {
   @Input() user: firebase.User;
-  login = ""; //TODO
-  password = ""; //TODO
+  login = "";
+  password = "";
 
   constructor() {}
 

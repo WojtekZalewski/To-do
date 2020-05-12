@@ -52,7 +52,6 @@ export class AppComponent implements OnInit {
       this.list = [];
     }
   }
-  /**events**/
   tasksList = [];
   tasksDone = [];
   addTask(task) {
