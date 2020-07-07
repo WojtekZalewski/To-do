@@ -4,11 +4,11 @@
 		<button (click)="onLogout()">Logout</button>
 	</div>
 	<div *ngIf='!user'>
+		<div class="login-info">login: wojtek@gmail.com
+			<br />
+			password: 123456</div>
 		<input [(ngModel)]='login' />
 		<input [(ngModel)]='password' />
 		<button (click)="onLogin()">Login</button>
-		<div class="login-info" style="margin-top: 10px; font-size: 12px; color: grey;">l: wojtek@gmail.com
-			<br />
-			h: 123456</div>
 	</div>
 </header>
